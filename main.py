@@ -19,7 +19,7 @@ def process_queries(queries):
 
     contacts = {}
     for cur_query in queries:
-        if cur_query.number > 1 and cur_query.number < 10**7:
+        if cur_query.number >= 0 and cur_query.number < 10**7:
             if cur_query.type == 'add':
                 if cur_query.name != 'not found' and len(cur_query.name) <= 15:
                     contacts[cur_query.number] = cur_query.name
